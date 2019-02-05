@@ -137,11 +137,29 @@ Con esto se tiene entonces que para que haya interferencia de tipo constructiva,
 sustituyendo \eqref{relacion_fase} en \eqref{intensidad_1} se tiene que
 \begin{equation}
 I=I_0\cos^2\left(\frac{\pi d \sin\theta}{\lambda}\right).
+\label{interferencia}
 \end{equation}
 De una forma similar, se puede mostrar que para una sola rendija la intensidad  de la luz está dada por
 \begin{equation}
-I=I_0\left(\frac{\sin\alpha}{\alpha}\right)^2
+I=I_0\left(\frac{\sin\alpha}{\alpha}\right)^2,
+\label{difraccion}
 \end{equation}
+en donde
+\begin{equation}
+\alpha=\frac{\pi a}{\lambda}\sin\theta,
+\end{equation}
+\begin{figure}[h]
+\center{\includegraphics[width=0.4\textwidth,trim={1.5cm 0 1.5cm 0}]
+{../Figuras/Ejemplo_interferencia.png}}
+\caption{\label{ejemplo interferencia} Ejemplo de la intensidad predicha por la ecuación \eqref{Intensidad_total} para el caso de las 2 rendijas (roja) y \eqref{difraccion} para el caso de una rendija (azul).}
+\end{figure}
+con $a$ la longitud de la rendija por la que pasa la luz. Por ultimo se tiene que la intensidad del patrón de luz debido a la difracción y la interferencia es el producto de las ecuaciones \eqref{interferencia} y \eqref{difraccion}
+\begin{equation}
+I=I_0\left(\frac{\sin\alpha}{\alpha}\right)^2\cos^2\left(\frac{\pi d \sin\theta}{\lambda}\right).
+\label{Intensidad_total}
+\end{equation}
+% trim={<left> <lower> <right> <upper>}
+
 %-----------------RESULTADOS----------------------
 \section{Resultados y Análisis}
 
