@@ -102,7 +102,7 @@ Desde mediados de 1600 hasta inicios de 1900 se discutió si la luz debía ser c
 \begin{figure}[h]
 \center{\includegraphics[width=0.4\textwidth]
 {../Figuras/double_rendija.PNG}}
-\caption{\label{doble rendija} Diagrama geométrico de la luz pasando por la doble rendija (tomado de \cite{MIT})}
+\caption{\label{doble rendija} Diagrama geométrico de la luz pasando por la doble rendija, de acá se puede deducir que $\delta=r_2-r_1\approx d\sin(\theta)$, lo cual es valido si la razón entre distancia entre las rendijas y la distnacia al detector es pequeña ($d/L\ll 1$)   (tomado de \cite{MIT}).}
 \end{figure}
 Gracias al desarrollo de la electrodinámica, se logró entender el comportamiento de la luz por medio de una ondas electromagnéticas. Debido a esto, la intensidad de la luz proveniente de 2 fuentes distintas\footnote{Para nuestro caso 2 rendijas}, puede escribirse como:
 \[I(z,t)=\vec{E}(z,t)\cdot \vec{E}(z,t),\]
@@ -127,8 +127,21 @@ con lo que efectuando la integral y reescribiendo el producto de los  se tiene e
 \begin{multline}
 I\sim  \langle \vec{E}\cdot \vec{E}\rangle = 4E_0^2 \cos^2\left(\frac{\phi}{2}\right)\langle\sin^2\left(\omega t+\frac{\phi}{2}\right)\rangle \\
 =2E_0^2\cos^2\left(\frac{\phi}{2}\right).
+\label{intensidad_1}
 \end{multline}
-Con esto se tiene entonces que para que haya interferencia de tipo constructiva, es necesario que $\phi=2\pi$
+Con esto se tiene entonces que para que haya interferencia de tipo constructiva, es necesario que $\phi=2\pi$, lo cual corresponde a una diferencia de camino de $\delta=\lambda$, donde $\lambda$ corresponde la longitud de onda de la luz y $\delta$ es la diferencia de caminos entre los dos campos eléctricos. Así de esta forma se deduce que
+\begin{equation}
+\phi = \frac{2\pi d}{\lambda}\sin\theta,
+\label{relacion_fase}
+\end{equation}
+sustituyendo \eqref{relacion_fase} en \eqref{intensidad_1} se tiene que
+\begin{equation}
+I=I_0\cos^2\left(\frac{\pi d \sin\theta}{\lambda}\right).
+\end{equation}
+De una forma similar, se puede mostrar que para una sola rendija la intensidad  de la luz está dada por
+\begin{equation}
+I=I_0\left(\frac{\sin\alpha}{\alpha}\right)^2
+\end{equation}
 %-----------------RESULTADOS----------------------
 \section{Resultados y Análisis}
 
@@ -147,9 +160,6 @@ Université Moulay Ismaïl, 2017
 Massachusetts Institute of Technology-
 \url{http://web.mit.edu/viz/EM/visualizations/coursenotes/modules/guide14.pdf}
  
-\bibitem{knuthwebsite} 
-Knuth: Computers and Typesetting,
-\\\texttt{http://www-cs-faculty.stanford.edu/\~{}uno/abcde.html}
 
 \end{thebibliography}
 
