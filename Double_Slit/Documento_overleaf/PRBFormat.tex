@@ -147,7 +147,7 @@ en donde
 \alpha=\frac{\pi a}{\lambda}\sin\theta,
 \end{equation}
 \begin{figure}[h]
-\center{\includegraphics[width=0.4\textwidth,trim={1.5cm 0 1.5cm 0}]
+\center{\includegraphics[width=0.4\textwidth,trim={1.5cm 1cm 1.5cm 0}]
 {../Figuras/Ejemplo_interferencia.png}}
 \caption{\label{ejemplo interferencia} Ejemplo de la intensidad predicha por la ecuación \eqref{Intensidad_total} para el caso de las 2 rendijas (roja) y \eqref{difraccion} para el caso de una rendija (azul).}
 \end{figure}
@@ -162,11 +162,26 @@ Las ecuaciones \eqref{Intensidad_total} y \eqref{difraccion} se muestran en la f
 %-----------------RESULTADOS----------------------
 \section{Resultados y Análisis}
 \subsection{Medición con un fotón a la vez}
+Dado que esta parte de la práctica se efectuó haciendo uso de un foto multiplicador, se tuvo como objetivo principal el caracterizar como dependía el conteo de fotones en función del voltaje aplicado. En la figura \ref{fotomultiplicador} se muestra el comportamiento del contador en función del voltaje aplicado.
 \begin{figure}[ht]
 \center{\includegraphics[width=0.4\textwidth]
 {../Figuras/fotomultiplicador.png}}
-\caption{\label{fotomultiplicador} .}
+\caption{\label{fotomultiplicador}Comportamiento de los conteos (TTL) en función del voltaje en el foto multiplicador. Los puntos en rojo corresponden a los datos obtenidos y la curva azul corresponde al ajuste efectuado.}
 \end{figure}
+De la figura \ref{fotomultiplicador} se tiene que el conteo de los fotones cumple entonces una ley exponencial, que a partir del ajuste tiene la forma:
+\begin{equation}
+C=e^{}
+\end{equation}
+
+A continuación en la figura \ref{interferencia_laserverde} se muestran los datos experimentales obtenidos al fijar el voltaje del foto multiplicador en $530\ V$ y su intensidad en el valor máximo $10$.
+\begin{figure}[ht]
+\center{\includegraphics[width=0.4\textwidth,trim={1.5cm 1cm 1.5cm 0.5cm}]
+{../Figuras/Interferencia_verde.png}}
+\caption{\label{interferencia_laserverde} Gráfica del patrón de interferencia junto a su ajuste respectivo, los parámetros obtenidos a partir del ajuste fueron $\lambda\approx 532 nm$, la longitud de onda de la fuente y $d\approx 0.334 mm$, la distancia entre las rendijas.}
+\end{figure}
+Como se puede apreciar en la figura \ref{interferencia_laserverde} para el caso de la bombilla con el filtro verde también exhibe el mismo patrón de interferencia en la intensidad que el láser, sin embargo, dado que esta luz fue filtrada en el rango del color verde ($530\sim590\ nm$). También algo que ocurre es que esta curva tiende a ser menos suave que la del láser, esto se debe principalmente a que al hacer uso de un foto multiplicador, la precisión del instrumento se reduce significativamente, no obstante, se tiene por otra parte que la intensidad aumenta, con lo cual se logra observar el patrón de interferencia.
+
+
 \begin{figure}[ht]
 \center{\includegraphics[width=0.4\textwidth]
 {../Figuras/Distribucion.png}}
@@ -177,11 +192,7 @@ Las ecuaciones \eqref{Intensidad_total} y \eqref{difraccion} se muestran en la f
 {../Figuras/sqrt_promedio_std.png}}
 \caption{\label{promedios_std} .}
 \end{figure}
-\begin{figure}[ht]
-\center{\includegraphics[width=0.4\textwidth]
-{../Figuras/Interferencia_verde.png}}
-\caption{\label{interferencia_laserverde} .}
-\end{figure}
+
 %---------------CONCLUSIONES-------------------
 
 \section{Conclusiones}
