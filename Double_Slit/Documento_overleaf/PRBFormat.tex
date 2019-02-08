@@ -163,42 +163,43 @@ Las ecuaciones \eqref{Intensidad_total} y \eqref{difraccion} se muestran en la f
 \section{Resultados y Análisis}
 \subsection{Medición con un fotón a la vez}
 Dado que esta parte de la práctica se efectuó haciendo uso de un foto multiplicador, se tuvo como objetivo principal el caracterizar como dependía el conteo de fotones en función del voltaje aplicado. En la figura \ref{fotomultiplicador} se muestra el comportamiento del contador en función del voltaje aplicado.
+
 \begin{figure}[ht]
 \center{\includegraphics[width=0.35\textwidth,trim={1.5cm 1cm 1.5cm 0.5cm}]
 {../Figuras/fotomultiplicador.png}}
 \caption{\label{fotomultiplicador}Comportamiento de los conteos (TTL) en función del voltaje en el foto multiplicador. Los puntos en rojo corresponden a los datos obtenidos y la curva azul corresponde al ajuste efectuado.}
 \end{figure}
+
 De la figura \ref{fotomultiplicador} se tiene que el conteo de los fotones cumple entonces una ley exponencial en función del voltaje aplicado, el cual cumple con un ajuste de la forma:
 \begin{equation}
 C=1.51\times10^{-17}\cdot e^{0.078V}.
 \end{equation}
 
-Seguido a esto se vario la intensidad del láser y se observó el comportamiento de la raíz del promedio en función de la desviación estándar, esto con el fin de probar si efectivamente se obtiene un comportamiento de tipo lineal como se espera\footnote{Se espera que la distribución de los conteos se asemeje a una distribución de Poisson dado que la luz que está entrando en el sensor es coherente.}. En la figura \ref{promedios_std} se muestran los resultados obtenidos para este comportamiento. Aunque no se obtuvo lo esperado ($\sigma=\sqrt{\mu}$), si se tiene una relación similar ($\sigma=0.77\sqrt{\mu}$).
-\begin{figure}[ht]
-\center{\includegraphics[width=0.35\textwidth,trim={1.5cm 0.5
-cm 1.5cm 0.5cm}]
-{../Figuras/sqrt_promedio_std.png}
+\begin{figure}[h]
+\center{\includegraphics[width=0.35\textwidth,trim={1.5cm 0.5cm 1.5cm 0.5cm}]
+{../Figuras/sqrt_promedio_std.png}}
 \caption{\label{promedios_std} Gráfico de la raíz del promedio de conteos a una intensidad dada, los puntos en rojo corresponden a los datos experimentales y la linea azul corresponde al ajuste efectuado.}
-}
 \end{figure}
 
-Con el fin de ilustrar esto, se efectuó un ``KDE''\footnote{Kernel Density Estimation} con el método de ``Silverman'' y se comparó con la distribución de Poisson con parámetro $k=\langle n\rangle=23$. Para comparar que tan similar eran estas dos se calculó la divergencia de Kullback-Leibler y se obtuvo un valor de $KL=0.014$, lo cual indica que ambas distribuciones parecen asemejarse bastante.\\
+Seguido a esto se vario la intensidad del láser a un voltaje de $530 V$ y se observó el comportamiento de la raíz del promedio en función de la desviación estándar, esto con el fin de probar si efectivamente se obtiene un comportamiento de tipo lineal como se espera\footnote{Se espera que la distribución de los conteos se asemeje a una distribución de Poisson dado que la luz que está entrando en el sensor es coherente.}. En la figura \ref{promedios_std} se muestran los resultados obtenidos para este comportamiento. Aunque no se obtuvo lo esperado ($\sigma=\sqrt{\mu}$), si se tiene una relación similar ($\sigma=0.77\sqrt{\mu}$).
 
-\begin{figure}[ht]
+
+Con el fin de ilustrar esto, se efectuó un ``KDE''\footnote{Kernel Density Estimation} con el método de ``Silverman'' y se comparó con la distribución de Poisson con parámetro $k=\langle n\rangle=23$. Para comparar que tan similar eran estas dos se calculó la divergencia de Kullback-Leibler y se obtuvo un valor de $D_{KL}=0.014$, lo cual indica que ambas distribuciones parecen asemejarse bastante.
+
+\begin{figure}[h]
 \center{\includegraphics[width=0.35\textwidth,trim={1.5cm 0.5cm 1.5cm 0.5cm}]
 {../Figuras/Distribucion.png}}
 \caption{\label{distribucion} Distribucion de probabilidad en función del numero de conteos del sensor, la linea narajana corresponde a una distribución de Poisson con parámetro $\langle n\rangle$ y la curva azul corresponde al estimado dado por los datos.}
 \end{figure}
-
-
-Una vez caracterizado el comportamiento del sensor y el conteo de fotones se midió el patrón de interferencia A continuación en la figura \ref{interferencia_laserverde} se muestran los datos experimentales obtenidos al fijar el voltaje del foto multiplicador en $530\ V$ y su intensidad en el valor máximo $10$.
-\begin{figure}[ht]
-\center{\includegraphics[width=0.4\textwidth,trim={1.5cm 1cm 1.5cm 0.5cm}]
+Una vez caracterizado el comportamiento del sensor y el conteo de fotones se midió el patrón de interferencia A continuación en la figura \ref{interferencia_laserverde} se muestran los datos experimentales obtenidos al fijar el voltaje del foto multiplicador en $530\ V$ y su intensidad en el valor máximo.
+\begin{figure}[h]
+\center{\includegraphics[width=0.35\textwidth,trim={1.5cm 1cm 1.5cm 0.5cm}]
 {../Figuras/Interferencia_verde.png}}
-\caption{\label{interferencia_laserverde} Gráfica del patrón de interferencia junto a su ajuste respectivo, los parámetros obtenidos a partir del ajuste fueron $\lambda\approx 532 nm$, la longitud de onda de la fuente y $d\approx 0.334 mm$, la distancia entre las rendijas.}
+\caption{\label{interferencia_laserverde} Gráfica del patrón de interferencia junto a su ajuste respectivo, los parámetros obtenidos a partir del ajuste fueron $\lambda\approx 558 nm$, la longitud de onda de la fuente y $d\approx 0.343 mm$, la distancia entre las rendijas.}
 \end{figure}
-\\
-Como se puede apreciar en la figura \ref{interferencia_laserverde} para el caso de la bombilla con el filtro verde también exhibe el mismo patrón de interferencia en la intensidad que el láser, sin embargo, dado que esta luz fue filtrada en el rango del color verde ($530\sim590\ nm$). También algo que ocurre es que esta curva tiende a ser menos suave que la del láser, esto se debe principalmente a que al hacer uso de un foto multiplicador, la precisión del instrumento se reduce significativamente, no obstante, se tiene por otra parte que la intensidad aumenta, con lo cual se logra observar el patrón de interferencia.
+
+
+Como se puede apreciar en la figura \ref{interferencia_laserverde} para el caso de la bombilla con el filtro verde también exhibe el mismo patrón de interferencia en la intensidad que el láser, sin embargo, esta curva tiende a ser menos suave que la del láser, esto se debe principalmente a que al hacer uso de un foto multiplicador, la precisión del instrumento se reduce significativamente, no obstante, se tiene que la intensidad aumenta, con lo cual se logra observar el patrón de interferencia. De acuerdo al ajuste se tiene que la longitud de onda de la fuente es de $\lambda=558(\pm 7)\ nm$ y la distancia entre los centros de las rendijas es de $d=0.343(\pm 5) mm$. Ambos valores parecen tener coherencia con lo reportado en la guía y con el hecho de que la fuente fuera de color verde \footnote{Con el filtro verde, según la referencia \cite{guia} del aparato se tiene un rango de longitud de ondas entre los $541nm$ y los  $551 nm$)}.
 
 
 
@@ -206,7 +207,9 @@ Como se puede apreciar en la figura \ref{interferencia_laserverde} para el caso 
 %---------------CONCLUSIONES-------------------
 
 \section{Conclusiones}
-
+\begin{itemize}
+    \item primera conclusión
+\end{itemize}
 %Se deben contestar las preguntas planteadas inicialmente o dar las razones por las cuales no es posible hacerlo. Las conclusiones deben ser necesariamente una consecuencia del experimento realizado, es decir que no se deben tocar aspectos que no se hayan expuesto en la sección de resultados y análisis. Si escribe algo que no se encuentra en la sección de resultados y análisis, esto quiere decir que hace falta incluir material en resultados y análisis. Concluir únicamente aspectos pertinentes a su trabajo en el laboratorio; evite generalizaciones que no hablan concretamente de lo que usted hizo o midió.
 
 \begin{thebibliography}{9}
@@ -216,8 +219,11 @@ Université Moulay Ismaïl, 2017
 \bibitem{MIT} 
 Massachusetts Institute of Technology
 \url{http://web.mit.edu/viz/EM/visualizations/coursenotes/modules/guide14.pdf}
+\bibitem{guia} 
+Inc. David A. Van Baak; TeachSpin. Two-slit interference one photon at a time \textit{The Essential Quantum Paradox}, instruction manual
+Suite 409 Buffalo NY, 2013.
+\url{http://physics-astronomy-manuals.wwu.edu/TeachSpin\%20Two\%20Slit\%20Expanded\%20Manual.pdf}
 \end{thebibliography}
-
 
 \end{document}
 %
