@@ -198,7 +198,35 @@ Una vez calibrado este haz de luz, se utiliza el contador de frecuencias, Freque
 
 %-----------------RESULTADOS----------------------
 \section{Resultados y Análisis}
-\subsection{}
+\subsection{Patrón de Interferencia}
+Los resultados de las pruebas de las intensidades del láser en el punto del máximo para la doble rendija y las rendijas individuales son mostradas en el cuadro \ref{comparacion_tabla}. A partir de este cuadro, se puede apreciar como la intensidad dada por la doble rendija simplemente no es la suma de ambas de las intensidades de cada una de las rendijas, esto es una evidencia clara de que la ecuación \eqref{difrac} explica por que en el fenómeno de interferencia es necesario incluir un término tal que la intensidad total es mayor que la suma de cada intensidad.
+
+
+\begin{table}[h]
+\begin{tabular}{c|c}
+\textbf{Rendija} & \multicolumn{1}{l}{\textbf{Intensidad $(\pm 0.005)[V]$}} \\ \hline\hline
+\textbf{Doble} & $1.11$ \\
+\textbf{Izquierda} & $0.21$ \\
+\textbf{Derecha} & $0.24$
+\end{tabular}
+\caption{Test cualitativo de los máximos para una doble rendija.}
+\label{comparacion_tabla}
+\end{table}
+
+Para cada una de estas configuraciones, sus patrones de interferencia fueron medidos. Los resultados se muestran en las figuras \ref{patron_de_una} y \ref{patron_de_dos} se muestran 
+
+\begin{figure}[ht]
+\center{\includegraphics[width=0.39\textwidth,trim={1.5cm 0.5cm 1.5cm 0.5cm}]
+{../Figuras/Intensidad_una_rojo.png}}
+\caption{\label{patron_de_una}Patrón de interferencia de una sola rendija. Los puntos en morado representan los datos obtenidos experimentalmente y la curva en rojo corresponde a un ajuste efectuado con $\lambda=668nm$.}
+\end{figure}
+
+\begin{figure}[h]
+\center{\includegraphics[width=0.39\textwidth,trim={1.5cm 0.5cm 1.5cm 0.5cm}]
+{../Figuras/Interferencia_laserrojo.png}}
+\caption{\label{patron_de_dos}Patrón de interferencia de doble rendija. Los puntos en morado representan los datos obtenidos experimentalmente y la curva en rojo corresponde a un ajuste efectuado con $\lambda=637nm$ y una distancia entre rendijas de $d=0.866mm$.}
+\end{figure}
+
 \subsection{Medición con un fotón a la vez}
 Dado que esta parte de la práctica se efectuó haciendo uso de un foto multiplicador, se tuvo como objetivo principal el caracterizar como dependía el conteo de fotones en función del voltaje aplicado. En la figura \ref{fotomultiplicador} se muestra el comportamiento del contador en función del voltaje aplicado.
 
