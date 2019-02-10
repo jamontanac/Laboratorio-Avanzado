@@ -213,12 +213,12 @@ Los resultados de las pruebas de las intensidades del láser en el punto del má
 \label{comparacion_tabla}
 \end{table}
 
-Para cada una de estas configuraciones, sus patrones de interferencia fueron medidos. Los resultados se muestran en las figuras \ref{patron_de_una} y \ref{patron_de_dos} se muestran 
+Para cada una de estas configuraciones, sus patrones de interferencia fueron medidos. Los resultados se muestran en las figuras \ref{patron_de_una} y \ref{patron_de_dos} se muestran los resultados obtenidos junto a sus respectivos ajustes.
 
 \begin{figure}[ht]
 \center{\includegraphics[width=0.39\textwidth,trim={1.5cm 0.5cm 1.5cm 0.5cm}]
 {../Figuras/Intensidad_una_rojo.png}}
-\caption{\label{patron_de_una}Patrón de interferencia de una sola rendija. Los puntos en morado representan los datos obtenidos experimentalmente y la curva en rojo corresponde a un ajuste efectuado con $\lambda=668nm$.}
+\caption{\label{patron_de_una}Patrón de interferencia de una sola rendija. Los puntos en morado representan los datos obtenidos experimentalmente y la curva en rojo corresponde a un ajuste efectuado con $\lambda=669nm$.}
 \end{figure}
 
 \begin{figure}[h]
@@ -226,7 +226,7 @@ Para cada una de estas configuraciones, sus patrones de interferencia fueron med
 {../Figuras/Interferencia_laserrojo.png}}
 \caption{\label{patron_de_dos}Patrón de interferencia de doble rendija. Los puntos en morado representan los datos obtenidos experimentalmente y la curva en rojo corresponde a un ajuste efectuado con $\lambda=637nm$ y una distancia entre rendijas de $d=0.866mm$.}
 \end{figure}
-
+ Con el fin de ajustar lo parámetros que mejor se ajustan a los datos obtenidos se obtuvo un valor de longitud de onda de  $\lambda=669(\pm 5) nm$ y $\lambda=637(\pm 4) nm$ respectivamente. El resultado obtenido para la doble rendija difiere significativamente de las especificaciones proporcionadas por el láser, no obstante el resultado sigue estando dentro del rango del rojo, se tiene que el origen de esta predicción surge a partir del algoritmo necesario al ajustar tanto la longitud de onda la separación entre los centros de las rendijas.
 \subsection{Medición con un fotón a la vez}
 Dado que esta parte de la práctica se efectuó haciendo uso de un foto multiplicador, se tuvo como objetivo principal el caracterizar como dependía el conteo de fotones en función del voltaje aplicado. En la figura \ref{fotomultiplicador} se muestra el comportamiento del contador en función del voltaje aplicado.
 
@@ -265,10 +265,19 @@ Una vez caracterizado el comportamiento del sensor y el conteo de fotones se mid
 \end{figure}
 
 
-Como se puede apreciar en la figura \ref{interferencia_laserverde} para el caso de la bombilla con el filtro verde también exhibe el mismo patrón de interferencia en la intensidad que el láser, sin embargo, esta curva tiende a ser menos suave que la del láser, esto se debe principalmente a que al hacer uso de un foto multiplicador, la precisión del instrumento se reduce significativamente, no obstante, se tiene que la intensidad aumenta, con lo cual se logra observar el patrón de interferencia. De acuerdo al ajuste se tiene que la longitud de onda de la fuente es de $\lambda=558(\pm 7)\ nm$ y la distancia entre los centros de las rendijas es de $d=0.343(\pm 5) mm$. Ambos valores parecen tener coherencia con lo reportado en la guía y con el hecho de que la fuente fuera de color verde \footnote{Con el filtro verde, según la referencia \cite{guia} del aparato se tiene un rango de longitud de ondas entre los $541nm$ y los  $551 nm$)}.
+Como se puede apreciar en la figura \ref{interferencia_laserverde} para el caso de la bombilla con el filtro verde también exhibe el mismo patrón de interferencia en la intensidad que el láser, sin embargo, esta curva tiende a ser menos suave que la del láser, esto se debe principalmente a que al hacer uso de un foto multiplicador, la precisión del instrumento se reduce significativamente, no obstante, se tiene que la intensidad aumenta, con lo cual se logra observar el patrón de interferencia. De acuerdo al ajuste se tiene que la longitud de onda de la fuente es de $\lambda=558(\pm 7)\ nm$ y la distancia entre los centros de las rendijas es de $d=0.343(\pm 5) mm$. Ambos valores parecen tener coherencia con lo reportado en la guía y con el hecho de que la fuente fuera de color verde \footnote{Con el filtro verde, según la referencia \cite{guia} del aparato se tiene un rango de longitud de ondas entre los $541nm$ y los  $551 nm$)}.\\
+Dado que el sensor que se utilizó tenía una eficiencia del $5\%$ de detección en el rango de longitud de onda del verde, se calculó la cantidad de fotones incidentes y con esto se estimó el tiempo de un pulso, los resultados se muestran en el cuadro \ref{tiempos_de_viaje}.
 
-
-
+\begin{table}[h]
+\begin{tabular}{|c|c|c|}
+\hline
+\textbf{\begin{tabular}[c]{@{}c@{}}Fotones\\  Incidentes\end{tabular}} & \textbf{\begin{tabular}[c]{@{}c@{}}Periodo de\\  un pulso\end{tabular}} & \textbf{\begin{tabular}[c]{@{}c@{}}Tiempo de viaje \\ de $1m$\end{tabular}} \\ \hline
+$620$                                                                  & $1.612\times 10^{-4}$                                                   & $3.34\times 10^{-9}$                                                        \\ \hline
+\end{tabular}
+\caption{Tiempos que toman los pulsos en llegar a través del camino hasta el detector}
+\label{tiempos_de_viaje}
+\end{table}
+ Esto lo que nos muestra es que la configuración utilizada en el montaje experimental fue tal que se podía garantizar que tan sólo un fotón está pasando por la rendija. Esto tiene como resultado principal que aún teniendo la condición de un solo fotón pasando a la vez por la rendija, el comportamiento de tipo onda sigue siendo apreciado como se muestra en la figura \ref{interferencia_laserverde}. Con esto se concluye que los fotones no sólo interfieren con otros fotones si no que también lo hacen consigo mismos, siendo esto la dualidad onda-partícula.
 
 %---------------CONCLUSIONES-------------------
 
