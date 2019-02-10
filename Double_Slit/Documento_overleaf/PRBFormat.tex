@@ -87,7 +87,7 @@
 
 \begin{abstract}
 
-Hace falta el resumen
+El experimento de la doble rendija es un experimento que tiene mucha importancia en la física, porque muestra la dualidad onda-partícula de la luz. En esta práctica se realizaron dos experimentos: En el primero se utiliza un láser para encontrar el patrón de interferencia que este posee, de manera cualitativa y cuantitativa, para confirmar los cálculos analíticos al considerar el campo eléctrico como una onda monocromática, propiedad que también presenta el láser. Se observó con éxito como el láser sigue el patrón esperado en la difracción tanto para una rendida, como para la doble rendija, junto con su relación de intensidad (la intensidad de la doble rendija es cuatro veces mayor al de la rendija simple). El segundo experimento usamos luz blanca y un filtro de luz verde, para hacer un conteo de fotones que pasan por un detector. Al comparar los tiempos de viaje de un solo fotón y el tiempo de detección del contador, se encontró la naturaleza corpuscular de la luz.
 
 \end{abstract}
 \maketitle
@@ -158,9 +158,47 @@ I=I_0\left(\frac{\sin\alpha}{\alpha}\right)^2\cos^2\left(\frac{\pi d \sin\theta}
 \end{equation}
 Las ecuaciones \eqref{Intensidad_total} y \eqref{difraccion} se muestran en la figura \ref{ejemplo interferencia}, ambas gráficas son hechas con parámetros idénticos para así observar la diferencia en los patrones de interferencia de una rendija y dos rendijas. Con estos resultados se tiene entonces que el patrón esperado a observar ha de ser similar\footnote{No se espera que siga este patrón a la perfección dado que la fuente que se usa no es necesariamente coherente (tanto espacial como temporal)} al de la figura \ref{ejemplo interferencia} para el caso de 2 rendijas. 
 % trim={<left> <lower> <right> <upper>}
+%----MONTAJE EXPERIMENTAL--------
 \section{Montaje experimental}
+
+El montaje experimental es el que presenta la figura \ref{montajecompleto}.
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[scale=0.1]{Double_Slit/Figuras/MontajeCompleto.jpg}
+    \caption{Montaje completo para práctica de doble rendija.}
+    \label{montajecompleto}
+\end{figure}
+ Este montaje está constituido de un láser y una luz blanca dentro del riel de un metro, los cuales pueden ser activados de un equipo a la vez, una rendija sencilla, una doble rendija con una rendija bloqueadora y una rendija detectora. Adicionalmente, este riel posee un foto detector, photon counting module de la compañía Teach Spin, como muestra la figura \ref{fotodetector}. Adicional a esto, también existe un multiplicador, de voltaje para aumentar la el voltaje leído en el multímetro, con un factor de 1/1000 V con referencia al voltaje registrado. Con todos estos equipos y el láser se realizará el primer experimento.
+ 
+\begin{figure}
+    \centering
+    \includegraphics[scale=0.1]{Double_Slit/Figuras/Foto_detector.jpg}
+    \caption{Fotodetector con amplificador de voltaje}
+    \label{fotodetector}
+\end{figure}
+
+Para el segundo experimento, se utiliza el mismo montaje, pero antes se utiliza un osciloscopio, como muestra la figura \ref{osciloscopio}, el cual se usará para calibrar la intensidad de la luz blanca emitida con un filtro de luz verde.
+
+\begin{figure}
+    \centering
+    \includegraphics[scale=0.1]{Double_Slit/Figuras/Osciloscopio.jpg}
+    \caption{Osciloscopio usado para calibrar la señal de luz blanca que llega al fotomultiplicador}
+    \label{osciloscopio}
+\end{figure}
+
+Una vez calibrado este haz de luz, se utiliza el contador de frecuencias, Frequency detector de BK precision (figura \ref{contador}, el cual realiza conteo de partículas cada segundo y una eficiencia del 4{%}. 
+
+\begin{figure}
+    \centering
+    \includegraphics[scale=0.1]{Double_Slit/Figuras/Contador.jpg}
+    \caption{Contador BK precision para realizar registrar el número de fotones que ingresan al fotomultiplicador}
+    \label{contador}
+\end{figure}
+
 %-----------------RESULTADOS----------------------
 \section{Resultados y Análisis}
+\subsection{}
 \subsection{Medición con un fotón a la vez}
 Dado que esta parte de la práctica se efectuó haciendo uso de un foto multiplicador, se tuvo como objetivo principal el caracterizar como dependía el conteo de fotones en función del voltaje aplicado. En la figura \ref{fotomultiplicador} se muestra el comportamiento del contador en función del voltaje aplicado.
 
@@ -208,7 +246,9 @@ Como se puede apreciar en la figura \ref{interferencia_laserverde} para el caso 
 
 \section{Conclusiones}
 \begin{itemize}
-    \item primera conclusión
+    \item Al observar el montaje experimental realizado y las figuras \ref{difraccion} y \ref{interferencia_laserverde}, se logró realizar el experimento de Young y observar los patrones de interferencia. Al observar la figura \ref{difraccion}, pudimos observar el patrón de interferencia para la una rendija simple, y con la figura \ref{interferencia_laserverde} observamos el patrón de interferencia para la doble rendija.
+    \item Al medir la interferencia con el fotodiodo y el fotomultiplicador se puede comprobar, usando el láser, como la intensidad de la doble rendija es cuatro veces mayor, al mirar los topes de las figuras \ref{interferencia_laserverde} y \ref{difraccion} . Al comparar esto, con los cálculos analíticos de la sección dos, se comprueba la naturaleza ondulatoria de la luz, pues los datos experimentales dan soporte a estos. Con el segundo experimento, usando el detector de partículas y al comparar los tiempos de viaje de y detección, fue posible observar el comportamiento corpuscular de la luz.
+    \item La comparar los resultados encontrados para los datos medidos y observar las difracciones esperadas de Fraunhofer y Fresnel, se observa que los patrones son muy similares, por lo que mientras se tengan distancias cortas (aproximadamente un metro) ambas teorías concuerdan.
 \end{itemize}
 %Se deben contestar las preguntas planteadas inicialmente o dar las razones por las cuales no es posible hacerlo. Las conclusiones deben ser necesariamente una consecuencia del experimento realizado, es decir que no se deben tocar aspectos que no se hayan expuesto en la sección de resultados y análisis. Si escribe algo que no se encuentra en la sección de resultados y análisis, esto quiere decir que hace falta incluir material en resultados y análisis. Concluir únicamente aspectos pertinentes a su trabajo en el laboratorio; evite generalizaciones que no hablan concretamente de lo que usted hizo o midió.
 
