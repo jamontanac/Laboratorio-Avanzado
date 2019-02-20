@@ -53,67 +53,58 @@ Director: Paula Giraldo Gallo\\
 \normalsize
 \section{Introducción}
 
-Los calcogenuros de metales de transición son materiales interesantes para el estudio de propiedades tanto ópticas como eléctricas,dado que al cambiar su composición a través del dopaje se observan fenómenos físicos como superconductividad, Onda Densidad de Carga (CDW, por sus siglas en inglés), entre muchos otros. En esta familia de materiales, se han encontrado algunos que presetan propiedades unidimensionales, y por lo mencionado anteriormente, es interesante desarrollar un estudio para entender de mejor manera las propiedades las propiedades químicas y 
+La interacción de un campo electromagnético con la estructura electrónica es un proceso que se observa en muchas partes de la naturaleza, sin embargo, el entendimiento de estos fenómenos, permanece siendo aún un problema abierto para una gran cantidad de materiales que poseen espectros que difieren significativamente a los esperados teóricamente. Con el fin de hacer uso de nuevos materiales en distintos tipos de aplicaciones, resulta necesario tener modelos teóricos que predigan de una forma más exacta la respuesta de estos materiales a distintos tipos de interacción.\\\\
+
+Un caso particular de estos materiales por estudiar son los calcogenuros de metales de transición. Estos son materiales interesantes para el estudio de propiedades tanto ópticas como eléctricas~\cite{dical}, dado que al cambiar su composición a través del dopaje se observan fenómenos físicos como superconductividad, Onda Densidad de Carga~\cite{CDW} (CDW, por sus siglas en inglés), entre muchos otros. En esta familia de materiales, se han encontrado algunos que presentan propiedades unidimensionales, y por lo mencionado anteriormente, es interesante desarrollar un estudio para entender de mejor manera las propiedades las propiedades químicas y electrónicas asociadas a estos materiales.
+
+Por esta razón, el objetivo de este proyecto es realizar una caracterización química de estos materiales usando difracción de rayos X y espectroscopia de energía dispersa (EDS por sus siglas en inglés). Seguido de esto, se realizará una revisión bibliográfica sobre dichas propiedades. Una vez toda esta información esté conocida, se realizará una exfoliación para reducir hasta capas atómicas las muestras y por último realizar espectroscopia Raman para analizar la dependencia del corrimiento Raman de picos característicos con el número de capas atómicas.
 
 \section{Estado del arte}
-\subsection{Experimental and theoretical studies}
+\subsection{Calcogenuros de metales de transición}
 
 
 
-\section{Objectives}
-\subsection{General Objective}
+\section{Objetivos}
+\subsection{Objetivo general}
 
-To study how changing the filling in the extended Fermi Hubbard Hamiltonian affects SC and CDW, using the DMRG algorithm. 
+Realizar una caracterización química y una espectroscopia para calcogenuros de metales de transición.
 
 \subsection{Specific Objectives}
 
 \begin{enumerate}
-    \item To develop a DMRG code and to test it by comparing the simulations to known results
-    \item  To calculate, using charge gaps and quantum entanglement, critical points between SC and CDW while varying filling.
-    \item To determine the parameter regimen values that optimizes SC.
+    \item Realizar la caracterización química de monocristales de calcogenuros de metales de transición unidimensionales por medio rayos x y EDS (Energy dispersive Spectroscopy).
+    \item Reducir las capas de estos materiales unidimensionales a sus alturas mínimas (idealmente un par de capas atómicas) por medio de procesos de exfoliación mecánica.
+    \item Caracterizar con microscopia de fuerza atómica y espectroscopia Raman tanto para el bulk como para las muestras exfoliadas, para conocer la dependencia del corrimiento Raman de picos característicos con el número de capas atómicas.
 \end{enumerate}
 
-\section{Methodology}
+\section{Metodología}
 
-As mentioned in sections 1 and 2, this work will be perfomed using DMRG. First initialization files created from MatLab and then uploaded to the university cluster to simulate the ground state for different values of $U$ and $V$ in the left zone of the diagram~\ref{phaseDiag}. From these simulations, charge gap, correlation functions and entanglement will be calculated. This information will be analyzed to determine the parameter regimen values that optimizes SC.
-
-\section{Ethical considerations}
-
-All the data that will be used in this project will be properly cited acknowledging the work done by other authors. Since this is a theoretical work, it does not need to go the Ethical Committe of the Science Faculty of the University.
-
-\section{Chronogram}
+\section{Cronograma}
 
 \begin{table}[htb]
-	\begin{tabular}{|c|cccccccccccccccc| }
+	\begin{tabular}{|c|cccccccccccccccc|}
 	\hline
-	Task $\backslash$ weeks & 1 & 2 & 3 & 4 & 5 & 6 & 7 & 8 & 9 & 10 & 11 & 12 & 13 & 14 & 15 & 16  \\
+	Task $\backslash$ weeks & 1 & 2 & 3 & 4 & 5 & 6 & 7 & 8 & 9 & 10&\\
 	\hline
-	1 & X & X & X & X &   &   &   &  &  &   &   &   &   &   &   &   \\
-	2 &   & X & X & X  & X & X &  &   &   &  &  &  &   &  &  &   \\
-	3 &   &   &   &   &   & X  & X  & X & X  & X  & X  & X &  X &   &  &   \\
-	4 &  &  &  &  &  &  &  & X & X & X &  X & X  &  X & X  &  X &   \\
-	5 &   &   &   &   &  &   &   &   &  & &  X & X &  X & X & X &   \\
-	6 &   &   &   &   &  &   &   &   &  &   &   & X &  X & X  & X & X  \\
+	1 & X & X & X & X &   &   &   &  &  &        \\
+	2 &   &  & & X & X &  &  &   &   &   \\
+	3 &   &   &   & X  &   &   &   & &   &    \\
+	4 & & & & & & &X &X &X & &              \\
+	5 &  &  &  &  &  &  &  X& X & X & X    \\
+	6& & & & & & & & &X & X&               \\
 	\hline
 	\end{tabular}
 \end{table}
 \vspace{1mm}
 
 \begin{itemize}
-	\item Task 1: Literature survey on DMRG and Extended Fermi Hubbard Hamiltonian.
-	\item Task 2: Development and testing of DMRG code 
-	\item Task 3: Simulation of ground states for different fillings and values of $U$ and $V$
-	\item Task 4: Calculation of gaps, correlations and entanglement based on the results of the simulations.
-	\item Task 5: Determination of phase diagram for each filling.
-	\item Task 6: Write final document and publishable article.
-\end{itemize}
+	\item Tarea 1: Caracterización con difracción de rayos X y EDS
+	\item Tarea 2: Busqueda de bibliografía para propiedades físicas relacionadas con la caracterización.
+	\item Tarea 3: Presentación con mitad de proyecto.
+	\item Tarea 4: Exfoliación mecánica a materiales unidimensionales.
+	\item Tarea 5: Espectroscopia Raman.
+	\item Tarea 6: Escritura informe final y preparación del póster final. 
 
-\section{Experts in the field}
-
-\begin{itemize}
-    \item Luis Quiroga Puello (Universidad de Los Andes)
-    \item Edgar Patiño (Universidad de Los Andes)
-    \item Jereson Silva (Universidad Nacional de Colombia)
 \end{itemize}
 
 \section*{Firma del Director}
