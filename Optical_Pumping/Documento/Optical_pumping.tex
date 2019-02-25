@@ -113,14 +113,39 @@ Para este experimento se hizo uso del aparato de ``optical pumping'' de la marca
 La cámara en donde se encontraba el Rubidio estaba rodeada por 2 bobinas de Helmholtz para así producir los campos magnéticos. Uno de estos campos debe estar alineado con el campo magnético terrestre, configuración que se obtuvo haciendo uso de una brújula, esto con el fin de que el campo generado por las bobinas Helholtz contrarrestara el campo terrestre y así de esta forma calibrar nuestras mediciones. el otro conjunto de bobinas de Helmholtz es usado para crear un campo magnético de ``barrido'', el cual nos permite identificar la intensidad de los campos magnéticos en los cuales las transiciones ocurren.\\
 El cable de RF es el encargado de revertir algunos de los efectos en el bombeo de los isótopos del Rb. Esto se logra al ajustar esta frecuencia en los estados que están siendo excitados.Para el caso del estado base, también se tiene que los fotones pueden ser absorbidos y por ende se observará una caída en la intensidad del detector.
 \subsection{Configurando el aparato}
-Con el fin de lograr visualizar los niveles de energía del rubidio se tuvo que calibrar inicialmente el montaje, esto con la finalidad de lograr que se asegurara una polarización circular de la luz, se puso el polarizador de media onda a un ángulo de 39 grados y con el fin de verificar que si se tenía polarización circular se dispuso un polarizador lineal al frente de la configuración (polarizador lineal y el de media onda) y se veía si la intensidad en el detector variaba al cambiar la disposición del último polarizador lineal, al no haber observado cambio significativo en el detector, se concluyo que se estaba trabajando con polarización circular tal y como se requería. Seguido a esto se procedió a ajustar el campo magnético vertical en $0.1A$ y se fijó la ganancia en 200, luego se empezó a cambiar el valor del campo magnético de barrido para encontrar el valor de campo que producía el pico de transición que se buscaba. Una vez encontrada esta configuración se procedió a conectar el generador RF y se hizo un estudio del efecto de la radio frecuencia en función de la corriente a la cual se encontraban los picos. Por último se puso un generador de onda cuadrada y se ubicó uno de los picos anteriormente encontrados, la onda generada era de tipo cuadrada y y se dispuso un voltaje de $10V$ de pico a pico a una frecuencia de $5Hz$, esto con el fin de analizar los periodos generados en las oscilaciones de Rabi para cada uno de los picos, en esta parte se varió la intensidad de la radio frecuencia de entrada.\\
+Con el fin de lograr visualizar los niveles de energía del rubidio se calibró inicialmente el montaje, tal que se asegurara una polarización circular de la luz, se puso el polarizador de media onda a un ángulo de 39 grados y con el fin de verificar que si se tenía polarización circular se dispuso un polarizador lineal al frente de la configuración (polarizador lineal y el de media onda), al ver que la intensidad en el detector no variaba al cambiar la disposición del último polarizador lineal, se concluyo que se estaba trabajando con polarización circular tal y como se requería. Seguido a esto se procedió a ajustar el campo magnético vertical en $0.1A$ y se fijó la ganancia en 200, luego se empezó a cambiar el valor del campo magnético de barrido para encontrar el valor de campo que producía el pico de transición que se buscaba. Una vez encontrada esta configuración se procedió a conectar el generador RF y se hizo un estudio del efecto de la radio frecuencia en función de la corriente a la cual se encontraban los picos. Por último se puso un generador de onda cuadrada y se ubicó uno de los picos anteriormente encontrados, la onda generada era de tipo cuadrada y y se dispuso un voltaje de $10V$ de pico a pico a una frecuencia de $5Hz$, esto con el fin de analizar los periodos generados en las oscilaciones de Rabi para cada uno de los picos, en esta parte se varió la intensidad de la radio frecuencia de entrada.\\
 A continuación se muestran los resultados obtenidos.
 
 
 %-----------------RESULTADOS----------------------
 \section{Resultados y Análisis}
+En la primera parte se varió el campo de barrido dejando un campo magnético vertical a $0.1 A$, con lo cual se encontró que el pico en el cual se producía una transición se encontraba en $0.370A$, en la figura \ref{foto pico} se evidencia el comportamiento observado en el osciloscopio.
 
+\begin{figure}[h]
+\center{\includegraphics[width=0.4\textwidth,trim={0.3cm 0.5cm 0.3cm 0.5cm}]
+{../Fotos/foto_pico.jpg}}
+\caption{\label{foto pico} Imagen tomada en el momento del experimento, acá se muestra el pico que da razón de una transición entre 2 niveles de energía.}
+\end{figure}
+De igual forma se varió el campo magnético horizontal para visualizar que influencia tenía este sobre el comportamiento en el pico, en la figura \ref{foto muerto} se observa que con tan sólo aumentar el campo magnético horizontal en $0.1 A$ el pico encontrado desaparece por completo. Esto se debe a que al poner una contribución externa de campo en otro dirección hace que los átomos no sean excitados de la misma forma y por ende esta transición desaparece.
 
+\begin{figure}[h]
+\center{\includegraphics[width=0.4\textwidth,trim={0.3cm 0.5cm 0.3cm 0.5cm}]
+{../Fotos/foto_muerto.jpeg}}
+\caption{\label{foto muerto}  Imagen tomada en el momento del experimento, acá se aprecia la influencia de introducir un campo magnético horizontal externo.}
+\end{figure}
+
+Una vez encontrado el valor de campo que produce el pico de transición, se procede a introducir una señal RF para así lograr identificar la separación de los niveles de energía de cada uno de los isótopos del Rubidio. Se varió la frecuencia y se observó como los picos variaban en función de esta frecuencia, en la figura \ref{feq_corr} se muestran los resultados obtenidos junto a los ajustes de cada conjunto de puntos.
+% trim={<left> <lower> <right> <upper>}
+\begin{figure}[h]
+\center{\includegraphics[width=0.4\textwidth,trim={0.1cm 0.3cm 0.1cm 0.3cm}]
+{../Figuras/Freq_corr.png}}
+\caption{\label{feq_corr} Ajuste al comportamiento entre la frecuencia aplicada y el valor del campo magnético en el cual se encontraba el pico. La linea anaranjada representa el primer isotopo del rubidio 87 mientras que la roja representa el Rubidio 85.}
+\end{figure}
+\begin{figure}[h]
+\center{\includegraphics[width=0.4\textwidth,trim={0.1cm 0.3cm 0.1cm 0.3cm}]
+{../Figuras/Voltaje_pp_periodo.png}}
+\caption{\label{Volt_periodo} ).}
+\end{figure}
 %---------------CONCLUSIONES-------------------
 
 \section{Conclusiones}
