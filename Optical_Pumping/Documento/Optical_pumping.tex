@@ -119,6 +119,7 @@ A continuación se muestran los resultados obtenidos.
 
 %-----------------RESULTADOS----------------------
 \section{Resultados y Análisis}
+\subsection{Transición a campo cero}
 En la primera parte se varió el campo de barrido dejando un campo magnético vertical a $0.1 A$, con lo cual se encontró que el pico en el cual se producía una transición se encontraba en $0.370A$, en la figura \ref{foto pico} se evidencia el comportamiento observado en el osciloscopio.
 
 \begin{figure}[h]
@@ -126,14 +127,15 @@ En la primera parte se varió el campo de barrido dejando un campo magnético ve
 {../Fotos/foto_pico.jpg}}
 \caption{\label{foto pico} Imagen tomada en el momento del experimento, acá se muestra el pico que da razón de una transición entre 2 niveles de energía.}
 \end{figure}
-De igual forma se varió el campo magnético horizontal para visualizar que influencia tenía este sobre el comportamiento en el pico, en la figura \ref{foto muerto} se observa que con tan sólo aumentar el campo magnético horizontal en $0.1 A$ el pico encontrado desaparece por completo. Esto se debe a que al poner una contribución externa de campo en otro dirección hace que los átomos no sean excitados de la misma forma y por ende esta transición desaparece.
-
 \begin{figure}[h]
 \center{\includegraphics[width=0.4\textwidth,trim={0.3cm 0.5cm 0.3cm 0.5cm}]
 {../Fotos/foto_muerto.jpeg}}
 \caption{\label{foto muerto}  Imagen tomada en el momento del experimento, acá se aprecia la influencia de introducir un campo magnético horizontal externo.}
 \end{figure}
+De igual forma se varió el campo magnético horizontal para visualizar que influencia tenía este sobre el comportamiento en el pico, en la figura \ref{foto muerto} se observa que con tan sólo aumentar el campo magnético horizontal en $0.1 A$ el pico encontrado desaparece por completo. Esto se debe a que al poner una contribución externa de campo en otro dirección hace que los átomos no sean excitados de la misma forma y por ende esta transición desaparece.
 
+
+\subsection{Efecto Zeeman para campo débil}
 Una vez encontrado el valor de campo que produce el pico de transición, se procede a introducir una señal RF para así lograr identificar la separación de los niveles de energía de cada uno de los isótopos del Rubidio. Se varió la frecuencia y se observó como los picos variaban en función de esta frecuencia, en la figura \ref{feq_corr} se muestran los resultados obtenidos junto a los ajustes de cada conjunto de puntos.
 % trim={<left> <lower> <right> <upper>}
 \begin{figure}[h]
@@ -141,11 +143,21 @@ Una vez encontrado el valor de campo que produce el pico de transición, se proc
 {../Figuras/Freq_corr.png}}
 \caption{\label{feq_corr} Ajuste al comportamiento entre la frecuencia aplicada y el valor del campo magnético en el cual se encontraba el pico. La linea anaranjada representa el primer isotopo del rubidio 87 mientras que la roja representa el Rubidio 85.}
 \end{figure}
+Como se observa en la figura \ref{feq_corr}, el comportamiento que se observa es de tipo lineal y además se tiene que la relación entre sus pendientes está muy cercano a lo esperado.
+\begin{equation}
+    \frac{m_{^{87}Rb}}{m_{^{85}Rb}}= 1.59\pm 0.09,
+    \label{relacion_pendientes}
+\end{equation}
+así de esta forma se tiene entonces que la relación entre los factores de Landé ($g_F$) es cercana a la predicha por la teoría.
+\subsection{Oscilaciones de Rabi}
+
 \begin{figure}[h]
 \center{\includegraphics[width=0.4\textwidth,trim={0.1cm 0.3cm 0.1cm 0.3cm}]
 {../Figuras/Voltaje_pp_periodo.png}}
-\caption{\label{Volt_periodo} ).}
+\caption{\label{Volt_periodo} Ajuste lineal efectuado a los periodos de oscilación de Rabi en función del voltaje $V_{pp}$.}
 \end{figure}
+En la figura \ref{Volt_periodo} se muestra el ajuste efectuado entre el periodo encontrado en las oscilaciones de Rabi y el inverso del Voltaje, dado que la relación teórica entre el voltaje y la frecuencia es lineal\cite{teoria de rabi}, se esperaba que el ajuste entre el periodo y el inverso del voltaje fuera lineal.\\
+Estas oscilaciones son debidas a la transición entre los niveles $M=2$ y $M=1$, aunque la práctica no nos permitió estudiar estos niveles de energía, puesto que no se efectuó la parte de efecto Zeeman cuadrático, el hecho de que se pueda visualizar estas oscilaciones nos da una idea de que el nivel de energía estudiado debe tener una degeneración, de forma que sea posible evidenciar este fenómeno.
 %---------------CONCLUSIONES-------------------
 
 \section{Conclusiones}
@@ -157,7 +169,8 @@ Una vez encontrado el valor de campo que produce el pico de transición, se proc
 \begin{thebibliography}{9}
 \bibitem{figura_aparato}
 \url{http://spa-mxpweb.spa.umn.edu/s11/Projects/S11_OpticalPumping/apparatus.htm}
-
+\bibitem{teoria de rabi}
+\url{http://www.bgu.ac.il/atomchip/Theses/Amir_Waxman_MSc_2007.pdf}
 \end{thebibliography}
 
 \end{document}
