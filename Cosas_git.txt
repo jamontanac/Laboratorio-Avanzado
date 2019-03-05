@@ -13,3 +13,6 @@ git reset HEAD~2
 El comando 
 git checkout nombre_rama
 lo que hace es mover el HEAD de rama, tener cuidado de saber sobre que rama se trabaja
+
+Ver tutorial de git en Bitbucket
+https://www.atlassian.com/git/tutorials/learn-git-with-bitbucket-cloud
