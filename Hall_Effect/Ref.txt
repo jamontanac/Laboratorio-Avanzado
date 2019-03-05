@@ -1,0 +1,12 @@
+Valores de las estructuras de bandas del Ge
+http://www.ioffe.ru/SVA/NSM/Semicond/Ge/bandstr.html
+Pagina con los valores teoricos de la estructura de bandas
+http://www.ioffe.ru/SVA/NSM/Semicond/SiGe/bandstr.html
+Banda GAP en funcion de la temperatura
+https://ecee.colorado.edu/~bart/book/eband5.htm
+Posibles referencias para ver el comportamiento de la conductuvidad en función de la temperatura
+http://www.phywe-es.com/index.php/fuseaction/download/lrn_file/versuchsanleitungen/p2530402/p2530402e.pdf
+http://nurun.lecturer.uin-malang.ac.id/wp-content/uploads/sites/7/2013/02/LEP5304_01band-Gap-Germanium.pdf
+Posible informe de efecto Hall
+https://rmf.smf.mx/pdf/rmf/34/1/34_1_85.pdf
+
