@@ -96,13 +96,14 @@ En este experimento se realizaron medidas para el efecto Hall clásico sobre una
 %---------------------INTRODUCCIÓN------------------
 \section{Introducción}
 
- 
- 
+ En 1879, Edwin Hall observó que cuando una corriente eléctrica pasa a través de una muestra confinada en un campo magnético, un potencial eléctrico, proporcional tanto a la corriente como a dicho campo, es generado en la dirección perpendicular a estos. Este fenómeno es lo que se denomina como efecto Hall y tiene muchas aplicaciones, principalmente para equipos electrónico, como audífonos o motores eléctricos~\cite{Efecto Hall}. Para este experimento, se planea ver el efecto Hall actuar sobre una placa de dopaje p, el cuál se explicará en la siguiente sección, junto a otros efectos que cambian la naturaleza del efecto Hall, como el efecto Ettinghause, aumentando las colisiones en el sistema; el efecto Nernst, reduciendo la resistencia Hall; y el efecto Righic Leduc, reduciendo la conductividad del sistema con un aumento de temperatura (estos efectos se explicarán más adelante).
+
  \section{Desarrollo Teórico}
  
- \subsection{Efecto Zeeman}
+ \subsection{Dopajes tipo n y p}
  
-
+ 
+ 
 % trim={<left> <lower> <right> <upper>}
 %----MONTAJE EXPERIMENTAL--------
 \section{Montaje experimental}
@@ -112,7 +113,7 @@ En este experimento se realizaron medidas para el efecto Hall clásico sobre una
 %-----------------RESULTADOS----------------------
 \section{Resultados y Análisis}
 \subsection{Relación entre la corriente que pasa por el montaje y el campo magnético generado}
-Dado que el Teslámetro que se tenía a disposición era un aparato sensible y delicado, se empezó primero por caracterizar como se comportaba el campo magnético generado por las bobinas en función de la corriente que circulaba por estas. Esto con el fin de que cuando se hablara de campo magnético, se supiera su equivalente en terminos de la corriente y así con esto minimizar el uso del aparato.\\
+Dado que el Teslámetro que se tenía a disposición era un aparato sensible y delicado, se empezó primero por caracterizar como se comportaba el campo magnético generado por las bobinas en función de la corriente que circulaba por estas. Esto con el fin de que cuando se hablara de campo magnético, se supiera su equivalente en términos de la corriente y así con esto minimizar el uso del aparato.\\
 Tal y como se muestra en la figura \ref{Calibracion}, la relación entre la corriente que circula por las bobinas y el campo magnético es de tipo lineal. Con esto se tiene entonces que hablar de corriente es equivalente a hablar de campo magnético\footnote{Es por esto que de ahora en adelante cuando se hable de campo magnético sus unidades serán Amperios}.
 
 \begin{figure}[h]
@@ -122,13 +123,16 @@ Tal y como se muestra en la figura \ref{Calibracion}, la relación entre la corr
 \end{figure}
 
 \subsection{Determinación de la resistencia de Hall.}
-Una vez caracterizado el campo magnético en función de la corriente, se fijó el campo magnético en 1.5 A y se analizó el comportamiento entre el voltaje de Hall $V_H$ en función de la corriente que pasaba por el material $I_p$
+Una vez caracterizado el campo magnético en función de la corriente, se fijó el campo magnético en 1.5 A y se analizó el comportamiento entre el voltaje de Hall $V_H$ en función de la corriente que pasaba por el material $I_p$.\\
+Tal y como se muestra en la figura \ref{V_H_vs_I_p} se tiene que la relación entre estas dos cantidades es de tipo lineal y a partir de la regresión se tiene entonces que el valor de la resistencia de Hall es:
+\[R_H=\frac{1.46\cdot 10^{-3}}{1.5(164.62)+17.05}=5.53\times 10^{-3} \pm (2.9\times 10^{-4}) \Omega\]
 \begin{figure}[h]
 \center{\includegraphics[width=0.4\textwidth]
 {../Figuras/Voltaje_hall_ip.png}}
-\caption{\label{V_H_vs_I_p}.  La linea en azul corresponde al ajuste efectuado, a los datos experimentales y la región sombreada corresponde a los intervalos de confidencia con $5\sigma$}
+\caption{\label{V_H_vs_I_p}Voltaje de Hall en función de la corriente que atraviesa la placa de tipo $P$, Se observó una tendencia de tipo lineal para los datos experimentales. La linea en azul corresponde al ajuste efectuado, a los datos experimentales y la región sombreada corresponde a los intervalos de confidencia con $5\sigma$}
 \end{figure}
 
+ De forma similar a la parte anterior se fijó el valor de la corriente $I_p$ en $-30 mA$ y luego se procedió a variar el campo magnético. En la figura \ref{V_H_vs_campo}  se observa el patrón obtenido, lo observado es que al igual que para la figura \ref{V_H_vs_I_p} se observó un comportamiento de tipo lineal, tal y como se esperaba, salvo que para este caso la linea formada tiene pendiente negativa, esto es explicado por el hecho de que la corriente que pasaba por la muestra tenía signo negativo.
 \begin{figure}[h]
 \center{\includegraphics[width=0.4\textwidth]
 {../Figuras/Voltaje_hall_Campo_magnetico.png}}
@@ -178,12 +182,11 @@ Una vez caracterizado el campo magnético en función de la corriente, se fijó 
 %Se deben contestar las preguntas planteadas inicialmente o dar las razones por las cuales no es posible hacerlo. Las conclusiones deben ser necesariamente una consecuencia del experimento realizado, es decir que no se deben tocar aspectos que no se hayan expuesto en la sección de resultados y análisis. Si escribe algo que no se encuentra en la sección de resultados y análisis, esto quiere decir que hace falta incluir material en resultados y análisis. Concluir únicamente aspectos pertinentes a su trabajo en el laboratorio; evite generalizaciones que no hablan concretamente de lo que usted hizo o midió.
 
 \begin{thebibliography}{9}
-\bibitem{Zeeman}
-Borda, N; Davidovich, I; Instituto Balseiro. Estudio del efecto Zeeman en Hg y determinación del magnetón de Bohr, 2009.
-\bibitem{teoria de rabi}
-\url{http://www.bgu.ac.il/atomchip/Theses/Amir_Waxman_MSc_2007.pdf}
-\bibitem{cohen}
-C. Cohen-Tannoudji, B. Diu, and F. Laloe. \textit{Quantum Mechanics}, 2 Volume Set. Wiley,1992.
+
+\bibitem{Efecto Hall}
+Woodford, c. \textit{Hall Effect Sensors}, \textit{Explain that stuff}, 2018 \url{https://www.explainthatstuff.com/hall-effect-sensors.html}
+\bibitem{Klitzing}
+ K. v. Klitzing, G. Dorda, and M. Pepper. \textit{New method for high-accuracy determination of thefine-structure constant based on quantized hall resistance}.Phys. Rev. Lett., 45:494–497, Aug 198
 \bibitem{figura_aparato}
 \url{http://spa-mxpweb.spa.umn.edu/s11/Projects/S11_OpticalPumping/apparatus.htm}
 \bibitem{guia optical pumping}
