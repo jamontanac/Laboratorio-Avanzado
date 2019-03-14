@@ -69,7 +69,7 @@
 
 %\preprint{APS/123-QED}
 
-\title{Efecto Hall\\ \textit{Estudio de efectos clásicos y cuánticos } }% Force line breaks with \\
+\title{Efecto Hall\\ \textit{Estudio de efectos clásicos} }% Force line breaks with \\
 
 %\subtitle{Estudio de la dualidad de onda partícula}
 
@@ -96,19 +96,101 @@ En este experimento se realizaron medidas para el efecto Hall clásico sobre una
 %---------------------INTRODUCCIÓN------------------
 \section{Introducción}
 
- En 1879, Edwin Hall observó que cuando una corriente eléctrica pasa a través de una muestra confinada en un campo magnético, un potencial eléctrico, proporcional tanto a la corriente como a dicho campo, es generado en la dirección perpendicular a estos. Este fenómeno es lo que se denomina como efecto Hall y tiene muchas aplicaciones, principalmente para equipos electrónico, como audífonos o motores eléctricos~\cite{Efecto Hall}. Para este experimento, se planea ver el efecto Hall actuar sobre una placa de dopaje p, el cuál se explicará en la siguiente sección, junto a otros efectos que cambian la naturaleza del efecto Hall, como el efecto Ettinghause, aumentando las colisiones en el sistema; el efecto Nernst, reduciendo la resistencia Hall; y el efecto Righic Leduc, reduciendo la conductividad del sistema con un aumento de temperatura (estos efectos se explicarán más adelante).
+ En 1879, Edwin Hall observó que cuando una corriente eléctrica pasa a través de una muestra confinada en un campo magnético, un potencial eléctrico, proporcional tanto a la corriente como a dicho campo, es generado en la dirección perpendicular a estos. Este fenómeno es lo que se denomina como efecto Hall y tiene muchas aplicaciones, principalmente para equipos electrónico, como audífonos o motores eléctricos~\cite{Efecto Hall}. Para este experimento, se planea ver el efecto Hall actuar sobre una placa de germanio con dopaje tipo p, el cuál se explicará en la siguiente sección, junto a otros efectos que cambian la naturaleza del efecto Hall, como el efecto Ettinghausen, aumentando las colisiones en un lado de la muestra; el efecto Nernst, reduciendo la resistencia Hall; y el efecto Righic Leduc, reduciendo la conductividad del sistema con un aumento de temperatura (estos efectos se explicarán más adelante).
 
  \section{Desarrollo Teórico}
  
- \subsection{Dopajes tipo n y p}
+ \subsection{Dopajes tipo n y p y el germanio}
  
+ Se define dopaje en semiconductores, materiales que tienen propiedades de conductor y aislante eléctrico, como el efecto de agregar impurezas de forma intencional para mejorar las propiedades de conducción o aislante en un semiconductor. El dopaje tipo n, consiste en agregar un material a la banda de valencia (conductora) generando así una facilidad en los electrones para moverse en la banda de conducción del material. Por otro lado, el dopaje P es aquel en el que la banda aislante es alimentada con un material para aumentar los portadores de carga positiva (huecos).  Para el material seleccionado, los dopajes tipo n se pueden pueden lograr con fósforo, mientras que el dopaje tipo P se puede lograr con boro~\cite{doping}.
  
+ Para esta práctica, solo se trabaja con dopaje tipo P, por esa razón, se explica a continuación sobre las propiedades de esa estructura de bandas, como se ve en la figura~\ref{bandstructure}:
  
+ \begin{figure}[h]
+\center{\includegraphics[width=0.4\textwidth]
+{../Figuras/bandstructure.jpg}} 
+\caption{\label{bandstructure}. Estructura de bandas del germanio tomado de~\cite{estructura de banda}}
+\end{figure}
+
+Acá se puede observar como el gap ha aumentado de una manera significativa desde el centro del diagrama hasta el nivel de 3.4$eV$, lo cual muestra que para llegar a ese punto se debe agregar mucha energía gracias a las propiedades de aislante mencionadas anteriormente.
+
+\subsection{Efectos termoeléctricos}
+
+Los efectos termoeléctricos que se trabajan en esta práctica son: El efecto Ettinghausen sucede al aplicar una corriente perpendicular al campo magnético sobre la muestra, un gradiente de temperatura perpendicular a ambas cantidades emerge. Como el efecto Hall, obliga a los portadores de carga a moverse perpendicular al campo y corriente aplicada, el número de colisiones aumenta en un lado calentando el material~\cite{Nernst}. Por otro lado, el efecto contrario, el efecto Nernst, al circular una corriente eléctrica en un campo magnético gracias a un gradiente de temperatura, se generará un campo eléctrico perpendicular a ambos. En este caso, se generará una decadencia en la resistencia Hall~\cite{Nernst}. Por último, el efecto Righic-Leduc, en el cual al aplicar un campo magnético a un flujo de calor establecido, un nuevo gradiente de temperatura, perpendicular a ambos aparecerá~\cite{Righic}. En este caso, se espera también una disminución con la resistencia Hall, dado el aumento de la temperatura.
+
+\subsection{Resistencia Hall normal y en semiconductores}
+
+Para poder definir la resistencia Hall, se necesita partir de las ecuaciones de movimiento las cuales son:
+
+\begin{equation}
+    v_x=-\frac{e\tau}{m}E_x - \frac{eB_z\tau}{m}v_y \\
+\end{equation}
+
+\begin{equation}
+    v_y=-\frac{e\tau}{m}E_y + \frac{eB_z\tau}{m}v_x \\
+\end{equation}
+
+\begin{equation}
+      v_z=-\frac{e\tau}{m}E_z
+\end{equation}
+
+Dónde en este caso, $e$ representa la carga del electrón; $\tau$ el tiempo característico de viaje; $m$, la masa del portador y $E_i$ y $B_z$ campos eléctricos y magnéticos asociados. En este caso, $E_x$ es el campo eléctrico horizontal que pasa por la figura y $E_y$, el campo eléctrico asociado al voltaje Hall. En todos los análisis realizados, el valor de $E_z$ siempre será 0.
+
+Existen dos casos, cuándo suponemos que $v_y$ es 0, así:
+
+\begin{equation*}
+    E_y=B_zV_x 
+\end{equation*}
+
+Ahora, dado que hay una densidad de corriente $j_x$ solo en la dirección x (y definiendo $V_H=E_yd$), la resistencia Hall producida por una corriente circundante $I$, se define como 
+
+\begin{equation}
+  R_H=\frac{E_y}{j_xB_z}=\frac{V_Hw}{IB_z}
+\end{equation}
+
+Dónde $d$ es el alto de la placa y $w$, el ancho de esta.  Ahora al definir $j_x=-nev_x$, con $n$ siendo total de portadores de carga negativos\footnote{Esto también puede ser usado en portadores de carga positivo, conviertiendo $R_H=\frac{1}{pe}$}, el campo eléctrico de Hall se convierte en:
+\begin{equation*}
+    E_y=-\frac{B_zjx}{ne},
+\end{equation*}
+
+convirtiendo la ecuación 4 en:
+
+\begin{equation}
+    R_H=-\frac{1}{ne}
+\end{equation}
+
+El segundo caso es suponer que la velocidad en y es diferente de 0, pero la densidad de corriente en esta dirección es 0. Esto permite usar las ecuaciones 1 y 2 para encontrar que 
+
+\begin{equation}
+    R_H=\frac{ p\mu_h^2-n\mu_e^2}{e( p\mu_h+n\mu_e)},
+\end{equation}
+
+donde se define $\mu$ como la movilidad de los electrones y tiene la forma $\mu=\frac{e\tau}{m}$ para cada tipo de portador. Por último, se puede definir la conductividad como
+
+\begin{equation*}
+    \sigma=ne\mu_e + pe\mu_p,
+\end{equation*}
+
+lo que permite escribir la movilidad como 
+
+\begin{equation*}
+    \mu=|R_H|\mu
+\end{equation*}
+
 % trim={<left> <lower> <right> <upper>}
 %----MONTAJE EXPERIMENTAL--------
 \section{Montaje experimental}
-\subsection{Instrumento de medición.}
+\subsection{Instrumento de medición}
 
+El montaje usado en esta práctica se presenta en la siguiente figura~\ref{montaje Hall}
+
+\begin{figure}[h]
+\center{\includegraphics[width=0.4\textwidth]
+{../Figuras/MontajeHall.PNG}} 
+\caption{\label{montaje Hall}. Montaje para efecto Hall tomado de~\cite{guia hall}}
+\end{figure}
+
+Este montaje está constituido por una fuente de poder DC para las bobinas, una fuente de poder AC para el medidor de Hall; unos multímetros para monitorear los valores de $V_H$, el potencial horizontal, la corriente que pasa a través de las bobinas por la fuente DC y el valor de la fuente AC. El medidor de Hall se usa para medir la corriente y la temperatura que pasan de manera paralela por la muestra con dopaje P de germanio, mientras que las bobinas se utilizan para medir un campo magnético generado gracias a la corriente DC que pasa a través de estos. En la fuente AC, se debe mantener siempre un voltaje de 12 V, mientras que en la fuente DC se variará el valor de la corriente. Adicional a esto, hay un teslámetro utilizado en la primera parte para medir el campo magnético generado en las bobinas el cual se calibra para obtener una relación con la corriente que alimenta las bobinas
 
 %-----------------RESULTADOS----------------------
 \section{Resultados y Análisis}
@@ -125,33 +207,42 @@ Tal y como se muestra en la figura \ref{Calibracion}, la relación entre la corr
 \subsection{Determinación de la resistencia de Hall.}
 Una vez caracterizado el campo magnético en función de la corriente, se fijó el campo magnético en 1.5 A y se analizó el comportamiento entre el voltaje de Hall $V_H$ en función de la corriente que pasaba por el material $I_p$.\\
 Tal y como se muestra en la figura \ref{V_H_vs_I_p} se tiene que la relación entre estas dos cantidades es de tipo lineal y a partir de la regresión se tiene entonces que el valor de la resistencia de Hall es:
-\[R_H=\frac{1.46\cdot 10^{-3}}{1.5(164.62)+17.05}=5.53\times 10^{-3} \pm (2.9\times 10^{-4}) \Omega\]
-\begin{figure}[h]
+\[R_H=\frac{1.46\cdot 10^{-3}}{1.5(164.62)+17.05}\]
+\[=5.53\times 10^{-3} (\pm 2.9\times 10^{-4}) \Omega\]
+\begin{figure}[h!]
 \center{\includegraphics[width=0.4\textwidth]
 {../Figuras/Voltaje_hall_ip.png}}
 \caption{\label{V_H_vs_I_p}Voltaje de Hall en función de la corriente que atraviesa la placa de tipo $P$, Se observó una tendencia de tipo lineal para los datos experimentales. La linea en azul corresponde al ajuste efectuado, a los datos experimentales y la región sombreada corresponde a los intervalos de confidencia con $5\sigma$}
 \end{figure}
 
  De forma similar a la parte anterior se fijó el valor de la corriente $I_p$ en $-30 mA$ y luego se procedió a variar el campo magnético. En la figura \ref{V_H_vs_campo}  se observa el patrón obtenido, lo observado es que al igual que para la figura \ref{V_H_vs_I_p} se observó un comportamiento de tipo lineal, tal y como se esperaba, salvo que para este caso la linea formada tiene pendiente negativa, esto es explicado por el hecho de que la corriente que pasaba por la muestra tenía signo negativo.
-\begin{figure}[h]
+\begin{figure}[h!]
 \center{\includegraphics[width=0.4\textwidth]
 {../Figuras/Voltaje_hall_Campo_magnetico.png}}
-\caption{\label{V_H_vs_campo}.  La linea en azul corresponde al ajuste efectuado, a los datos experimentales y la región sombreada corresponde a los intervalos de confidencia con $5\sigma$}
+\caption{\label{V_H_vs_campo}Regresión del voltaje de Hall $V_H$ en función del campo magnético aplicado $B_z$.  La linea en azul corresponde al ajuste efectuado, a los datos experimentales y la región sombreada corresponde a los intervalos de confidencia con $5\sigma$}
 \end{figure}
 
-\begin{figure}[h]
+A partir de la regresión mostrada en la figura \ref{V_H_vs_campo} se obtiene que la resistencia de Hall $R_H$ se puede calcular al regresar los valores de corriente a unidades de campo magnético por medio de la relaciòn encontrada en la regresión de la figura \ref{Calibracion}, con lo cual se obtiene que:
+\[R_H=\frac{0.1854}{30}\]
+\[=6.18\times 10^{-3} (\pm 7.1\times 10^{-4})\Omega\]
+Comparando con el resultado anterior se tiene que ambos valores obtenidos de $R_H$, se obtiene que la diferencia porcentual entre los valores obtenidos es de aproximadamente un $10\%$. Aunque es una diferencia bastante grande con respecto a lo esperado, se le atribuye esta discrepancia al hecho de la falta de control sobre el voltaje suministrado por la fuente $AC$, dado que esta aumentaba el voltaje que entregaba al circuito a medida que el tiempo pasaba. 
+\subsection{Determinación de la resistencia longitudinal y su dependencia con el campo magnético}
+En la figura \ref{V longitudinal vs ip} se muestra en resultado obtenido del comportamiento del voltaje longitudinal en función de la corriente que pasa por la muestra $I_p$ a campo cero. Como se puede observar también se presenta un carácter de tipo Ohmico con resistencia de $R_L = 55.17 (\pm 0.75)$
+\begin{figure}[h!]
 \center{\includegraphics[width=0.4\textwidth]
 {../Figuras/Voltaje_longitudinal_ip.png}}
-\caption{\label{V longitudinal vs ip}.  La linea en azul corresponde al ajuste efectuado, a los datos experimentales y la región sombreada corresponde a los intervalos de confidencia con $5\sigma$}
+\caption{\label{V longitudinal vs ip}Regresión del voltaje Longitudinal $V_L$ en función de la corriente que atravesaba la muestra $I_p$.  La linea en azul corresponde al ajuste efectuado, a los datos experimentales y la región sombreada corresponde a los intervalos de confidencia con $5\sigma$}
 \end{figure}
+
+Una vez se caracterizó la resistencia longitudinal a campo nulo, se procedió a efectuar la misma toma de datos para diferentes valores de campo magnético ($0.25 - 3.0 A$) y se halló su respectivo ajuste para determinar el valor de la resistencia. Los resultados obtenidos de la resistencia relativa se muestran en la figura \ref{R_vs_Campo}. el resultado obtenido no corresponde a lo esperado (Un comportamiento de tipo cuadrático), esto parece atribuirse al hecho de que el circuito sobre el cual estaba montada la tarjeta parecía tener una falla, sin embargo, esto no se pudo comprobar dentro de los resultados obtenidos y por ende lo que se obtiene es que el comportamiento exhibido por la muestra tiene un comportamiento atípico con respecto al predicho por el efecto de magneto resistencia.
 
 \begin{figure}[h]
 \center{\includegraphics[width=0.4\textwidth]
 {../Figuras/Resistencia_vs_Campo_magnetico.png}}
-\caption{\label{R_vs_Campo}.  La linea en azul corresponde al ajuste efectuado, a los datos experimentales y la región sombreada corresponde a los intervalos de confidencia con $5\sigma$}
+\caption{\label{R_vs_Campo}Ajuste de la resistencia relativa a la resistencia a campo cero en función del campo magnético aplicado.  La linea en azul corresponde al ajuste efectuado, a los datos experimentales y la región sombreada corresponde a los intervalos de confidencia con $2\sigma$}
 \end{figure}
 
-
+\subsection{Efectos de la temperatura en la conductividad, el voltaje de Hall y la ``movilidad de Hall''}
 
 \begin{figure}[h]
 \center{\includegraphics[width=0.4\textwidth]
@@ -176,7 +267,7 @@ Tal y como se muestra en la figura \ref{V_H_vs_I_p} se tiene que la relación en
 
 \section{Conclusiones}
 \begin{itemize}
-    \item 
+    \item Gracias a las figuras~\ref{}
     \item 
 \end{itemize}
 %Se deben contestar las preguntas planteadas inicialmente o dar las razones por las cuales no es posible hacerlo. Las conclusiones deben ser necesariamente una consecuencia del experimento realizado, es decir que no se deben tocar aspectos que no se hayan expuesto en la sección de resultados y análisis. Si escribe algo que no se encuentra en la sección de resultados y análisis, esto quiere decir que hace falta incluir material en resultados y análisis. Concluir únicamente aspectos pertinentes a su trabajo en el laboratorio; evite generalizaciones que no hablan concretamente de lo que usted hizo o midió.
@@ -187,10 +278,16 @@ Tal y como se muestra en la figura \ref{V_H_vs_I_p} se tiene que la relación en
 Woodford, c. \textit{Hall Effect Sensors}, \textit{Explain that stuff}, 2018 \url{https://www.explainthatstuff.com/hall-effect-sensors.html}
 \bibitem{Klitzing}
  K. v. Klitzing, G. Dorda, and M. Pepper. \textit{New method for high-accuracy determination of thefine-structure constant based on quantized hall resistance}.Phys. Rev. Lett., 45:494–497, Aug 198
-\bibitem{figura_aparato}
-\url{http://spa-mxpweb.spa.umn.edu/s11/Projects/S11_OpticalPumping/apparatus.htm}
-\bibitem{guia optical pumping}
-Mejía, J; Universidad de los Andes. \textit{Bombeo óptico}, 2017.
+\bibitem{doping}
+Laube, P; \textit{Semiconductor technology from A to Z}.\url{https://www.halbleiter.org/en/fundamentals/doping/}
+\bibitem{estructura de banda}
+\url{http://www.globalsino.com/micro/1/1micro9970.html}
+\bibitem{Nernst}
+ Ettingshausen, A.; Nernst, W. (1886). \textit{Ueber das Auftreten electromotorischer Kräfte in Metallplatten, welche von einem Wärmestrome durchflossen werden und sich im magnetischen Felde befinden}. Annalen der Physik und Chemie. 265 (10): 343–347.
+ \bibitem{Righic}
+ Qing-Lian Xu, Zhen-Gang Zhu, Gang Su, \textit{Generalized Fourier law and anomalous Righi–Leduc effect in a ferromagnet}, Physics Letters A, Volume 382, Issues 42–43, 2018,Pages 3115-3119, ISSN 0375-9601, https://doi.org/10.1016/j.physleta.2018.08.006. \url{(http://www.sciencedirect.com/science/article/pii/S0375960118308648)}
+ \bibitem{guia hall}
+ Mejía, J; Universidad de los Andes. \textit{Efecto Hall}, 2017.
 
 \end{thebibliography}
 
