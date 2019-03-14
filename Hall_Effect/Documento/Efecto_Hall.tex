@@ -173,9 +173,10 @@ donde se define $\mu$ como la movilidad de los electrones y tiene la forma $\mu=
 
 lo que permite escribir la movilidad como 
 
-\begin{equation*}
-    \mu=|R_H|\mu
-\end{equation*}
+\begin{equation}
+    \mu=|R_H|\sigma
+    \label{movilidad_hall}
+\end{equation}
 
 % trim={<left> <lower> <right> <upper>}
 %----MONTAJE EXPERIMENTAL--------
@@ -201,7 +202,7 @@ Tal y como se muestra en la figura \ref{Calibracion}, la relación entre la corr
 \begin{figure}[h]
 \center{\includegraphics[width=0.4\textwidth]
 {../Figuras/Calibracion_error.png}}
-\caption{\label{Calibracion}. Gráfico del campo magnético medido por el Teslametro en función de la corriente suministrada por la fuente. La linea en azul corresponde al ajuste efectuado, a los datos experimentales y la región sombreada corresponde a los intervalos de confidencia con $5\sigma$}
+\caption{\label{Calibracion}. Gráfico del campo magnético medido por el Teslametro en función de la corriente suministrada por la fuente. La linea en azul corresponde al ajuste efectuado a los datos experimentales y la región sombreada corresponde a los intervalos de confidencia con $5\sigma$}
 \end{figure}
 
 \subsection{Determinación de la resistencia de Hall.}
@@ -212,17 +213,17 @@ Tal y como se muestra en la figura \ref{V_H_vs_I_p} se tiene que la relación en
 \begin{figure}[h!]
 \center{\includegraphics[width=0.4\textwidth]
 {../Figuras/Voltaje_hall_ip.png}}
-\caption{\label{V_H_vs_I_p}Voltaje de Hall en función de la corriente que atraviesa la placa de tipo $P$, Se observó una tendencia de tipo lineal para los datos experimentales. La linea en azul corresponde al ajuste efectuado, a los datos experimentales y la región sombreada corresponde a los intervalos de confidencia con $5\sigma$}
+\caption{\label{V_H_vs_I_p}Voltaje de Hall en función de la corriente que atraviesa la placa de tipo $P$, Se observó una tendencia de tipo lineal para los datos experimentales. La linea en azul corresponde al ajuste efectuado a los datos experimentales y la región sombreada corresponde a los intervalos de confidencia con $5\sigma$}
 \end{figure}
 
  De forma similar a la parte anterior se fijó el valor de la corriente $I_p$ en $-30 mA$ y luego se procedió a variar el campo magnético. En la figura \ref{V_H_vs_campo}  se observa el patrón obtenido, lo observado es que al igual que para la figura \ref{V_H_vs_I_p} se observó un comportamiento de tipo lineal, tal y como se esperaba, salvo que para este caso la linea formada tiene pendiente negativa, esto es explicado por el hecho de que la corriente que pasaba por la muestra tenía signo negativo.
 \begin{figure}[h!]
 \center{\includegraphics[width=0.4\textwidth]
 {../Figuras/Voltaje_hall_Campo_magnetico.png}}
-\caption{\label{V_H_vs_campo}Regresión del voltaje de Hall $V_H$ en función del campo magnético aplicado $B_z$.  La linea en azul corresponde al ajuste efectuado, a los datos experimentales y la región sombreada corresponde a los intervalos de confidencia con $5\sigma$}
+\caption{\label{V_H_vs_campo}Regresión del voltaje de Hall $V_H$ en función del campo magnético aplicado $B_z$.  La linea en azul corresponde al ajuste efectuado a los datos experimentales y la región sombreada corresponde a los intervalos de confidencia con $5\sigma$}
 \end{figure}
 
-A partir de la regresión mostrada en la figura \ref{V_H_vs_campo} se obtiene que la resistencia de Hall $R_H$ se puede calcular al regresar los valores de corriente a unidades de campo magnético por medio de la relaciòn encontrada en la regresión de la figura \ref{Calibracion}, con lo cual se obtiene que:
+A partir de la regresión mostrada en la figura \ref{V_H_vs_campo} se obtiene que la resistencia de Hall $R_H$ se puede calcular al regresar los valores de corriente a unidades de campo magnético por medio de la relación encontrada en la regresión de la figura \ref{Calibracion}, con lo cual se obtiene que:
 \[R_H=\frac{0.1854}{30}\]
 \[=6.18\times 10^{-3} (\pm 7.1\times 10^{-4})\Omega\]
 Comparando con el resultado anterior se tiene que ambos valores obtenidos de $R_H$, se obtiene que la diferencia porcentual entre los valores obtenidos es de aproximadamente un $10\%$. Aunque es una diferencia bastante grande con respecto a lo esperado, se le atribuye esta discrepancia al hecho de la falta de control sobre el voltaje suministrado por la fuente $AC$, dado que esta aumentaba el voltaje que entregaba al circuito a medida que el tiempo pasaba. 
@@ -231,7 +232,7 @@ En la figura \ref{V longitudinal vs ip} se muestra en resultado obtenido del com
 \begin{figure}[h!]
 \center{\includegraphics[width=0.4\textwidth]
 {../Figuras/Voltaje_longitudinal_ip.png}}
-\caption{\label{V longitudinal vs ip}Regresión del voltaje Longitudinal $V_L$ en función de la corriente que atravesaba la muestra $I_p$.  La linea en azul corresponde al ajuste efectuado, a los datos experimentales y la región sombreada corresponde a los intervalos de confidencia con $5\sigma$}
+\caption{\label{V longitudinal vs ip}Regresión del voltaje Longitudinal $V_L$ en función de la corriente que atravesaba la muestra $I_p$.  La linea en azul corresponde al ajuste efectuado a los datos experimentales y la región sombreada corresponde a los intervalos de confidencia con $5\sigma$}
 \end{figure}
 
 Una vez se caracterizó la resistencia longitudinal a campo nulo, se procedió a efectuar la misma toma de datos para diferentes valores de campo magnético ($0.25 - 3.0 A$) y se halló su respectivo ajuste para determinar el valor de la resistencia. Los resultados obtenidos de la resistencia relativa se muestran en la figura \ref{R_vs_Campo}. el resultado obtenido no corresponde a lo esperado (Un comportamiento de tipo cuadrático), esto parece atribuirse al hecho de que el circuito sobre el cual estaba montada la tarjeta parecía tener una falla, sin embargo, esto no se pudo comprobar dentro de los resultados obtenidos y por ende lo que se obtiene es que el comportamiento exhibido por la muestra tiene un comportamiento atípico con respecto al predicho por el efecto de magneto resistencia.
@@ -239,36 +240,45 @@ Una vez se caracterizó la resistencia longitudinal a campo nulo, se procedió a
 \begin{figure}[h]
 \center{\includegraphics[width=0.4\textwidth]
 {../Figuras/Resistencia_vs_Campo_magnetico.png}}
-\caption{\label{R_vs_Campo}Ajuste de la resistencia relativa a la resistencia a campo cero en función del campo magnético aplicado.  La linea en azul corresponde al ajuste efectuado, a los datos experimentales y la región sombreada corresponde a los intervalos de confidencia con $2\sigma$}
+\caption{\label{R_vs_Campo}Ajuste de la resistencia relativa a la resistencia a campo cero en función del campo magnético aplicado.  La linea en azul corresponde al ajuste efectuado a los datos experimentales y la región sombreada corresponde a los intervalos de confidencia con $2\sigma$}
 \end{figure}
 
 \subsection{Efectos de la temperatura en la conductividad, el voltaje de Hall y la ``movilidad de Hall''}
+A partir del modelo de conductividad en función de la temperatura para materiales semiconductores, se determinó la conductividad sobre el material como el inverso de la resistencia\footnote{Aunque la conductividad no es exactamente igual a el inverso de la resistencia, si se tiene una relación de proporcionalidad.}.
 
-\begin{figure}[h]
+\begin{figure}[h!]
 \center{\includegraphics[width=0.4\textwidth]
 {../Figuras/Comnductividad_Temperatura.png}}
-\caption{\label{Conductividad en función de la temperatura}.  La linea en azul corresponde al ajuste efectuado, a los datos experimentales y la región sombreada corresponde a los intervalos de confidencia con $5\sigma$}
+\caption{\label{Conductividad en funcion de la temperatura}Gráfica del logaritmo de la conductividad en función del inverso de la temperatura.  La linea en azul corresponde al ajuste efectuado a los datos experimentales y la región sombreada corresponde a los intervalos de confidencia con $2\sigma$}
 \end{figure}
-
+En la figura \ref{Conductividad en funcion de la temperatura} se muestra un ajuste de tipo lineal a el logaritmo de la conductividad en función del inverso de la temperatura, a partir del ajuste se puede determinar el valor de la energía de GAP del material utilizado, con lo cual se obtuvo que esta energía tenia un valor de:
+\[E_g=8.617\times 10^{-5}\cdot2534.69=0.218 (\pm 0.006) \ eV,\]
+Comparando este resultado con el valor aceptado de energía para el Germanio\cite{Energia de gap}, se tiene que el resultado no está nada cerca de lo esperado, no obstante, dado que las fluctuaciones de la temperatura fueron tan altas, el resultado anterior no es de ``mucha'' confianza y se debe hacer un análisis adicional para comprobar esto. Con el fin de comprobar la veracidad del resultado anterior, se analizó el comportamiento del voltaje de Hall en función de la temperatura, los resultados obtenidos son mostrados en la figura\ref{Region intrinseca}. A partir del ajuste efectuado y bajo la hipótesis que la concentración de portadores intrínsecos $n$  sigan la distribución de Maxwell-Boltzman, se tiene que el valor de la energía de GAP del material utilizado es:
+\[E_g=2\cdot 3666.46 \cdot8.617\times 10^{-5}\]
+\[=0.63 (\pm 0.02) eV,\]
+lo cual corresponde al valor aceptado de energía de GAP para el Germanio \cite{Energia de gap}, presentando un error relativo del $4\%$. Con esto se concluye que la muestra con la que se está trabajando es de tipo semiconductora y dado el valor obtenido de energía de GAP, se tiene que la muestra está compuesta en su mayoría por Germanio.
 
 \begin{figure}[h]
 \center{\includegraphics[width=0.4\textwidth]
 {../Figuras/Region_intrinseca.png}}
-\caption{\label{Region intrinseca}.  La linea en azul corresponde al ajuste efectuado, a los datos experimentales y la región sombreada corresponde a los intervalos de confidencia con $5\sigma$}
+\caption{\label{Region intrinseca}Gráfica del logaritmo del voltaje de Hall por la temperatura a los $3/2$ en función del inverso de la temperatura. En la gráfica se efectuó la regresión  sobre la región identificada como ``intrinseca'', la gráfica más pequeña muestra el comportamiento sobre todos los valores medidos de temperatura.}
 \end{figure}
 
 
-\begin{figure}[h]
+\begin{figure}[h!]
 \center{\includegraphics[width=0.4\textwidth]
 {../Figuras/Movilidad_Hall.png}}
-\caption{\label{movilidad de Hall}.  La linea en azul corresponde al ajuste efectuado, a los datos experimentales y la región sombreada corresponde a los intervalos de confidencia con $5\sigma$}
+\caption{\label{movilidad de Hall}Gráfico de la movilidad de Hall en función de la temperatura, la gráfica pequeña muestra el comportamiento encontrado en las distintas temperaturas. La linea en azul corresponde al ajuste efectuado sobre la región descrita y la región sombreada corresponde a los intervalos de confidencia con $3\sigma$}
 \end{figure}
+
+Por ultimo se quiso verificar si existía una región en el cual el comportamiento de la movilidad de Hall descrito por la ecuación \eqref{movilidad_hall} estuviera descrito por un comportamiento de $T^{-3/2}$\footnote{Esto se puede deducir fácilmente del hecho de que $R_H\sim T^{-3/2}e^{E/K_BT}$ y $\sigma \sim e^{E/K_BT}$, así de esta forma se deduce que el comportamiento para esta región será $\propto T^{-3/2}$}. en la figura \ref{movilidad de Hall} se muestra el comportamiento encontrado en función de la temperatura. Tal y como se esperaba se encontró una región sobre la cual este se exhibe un comportamiento de ley de potencias, al encontrar que el exponente es $-1.502 (\pm 0.011)$ se deduce que esta región es la región en la que dominan procesos de dispersión de fonones.
 %---------------CONCLUSIONES-------------------
 
 \section{Conclusiones}
 \begin{itemize}
-    \item Gracias a las figuras~\ref{}
-    \item 
+    \item Gracias a las figuras~\ref{V_H_vs_I_p} y \ref{V_H_vs_campo} se puede decir que se observa el efecto Hall para placas tipo P con éxito gracias a la cercanía entre sus coeficientes Hall, que en este caso tiene una discrepancia del 10\% gracias los súbitos cambios de voltaje y corriente que proporcionaba la fuente que alimentaba al medidor de Hall. No obstante, gracias al comportamiento lineal de ambas gráficas, se puede afirmar que para ambos se obtiene el comportamiento deseado (lineal) reiterando lo dicho al comienzo del párrafo.
+    \item Al observar la figura~\ref{R_vs_Campo} se puede afirmar que no se vio con éxito el comportamiento esperado, esto se puede deber principalmente a los repentinos saltos de temperatura en esta toma de datos, los cuales siempre tuvieron un comportamiento lineal, lo cual va de la mano con lo visto en las figuras anteriores a esta. Con respecto a la temperatura (figuras~\ref{Conductividad en funcion de la temperatura} y \ref{Region intrinseca}) 
+    \item Observando la figura~\ref{V_H_vs_campo} se nota que al cambiar la dirección de corriente se obtiene un cambio en la pendiente. Esto indica un comportamiento positivo de la tarjeta de tipo (dada la orientación con la corriente) esto tiene sentido pues como se ve en la literatura, un dopaje tipo P aumenta la banda aislante, aumentando los portadores de carga positivos. Y con la figura , se puede observar que en la densidad de partículas
 \end{itemize}
 %Se deben contestar las preguntas planteadas inicialmente o dar las razones por las cuales no es posible hacerlo. Las conclusiones deben ser necesariamente una consecuencia del experimento realizado, es decir que no se deben tocar aspectos que no se hayan expuesto en la sección de resultados y análisis. Si escribe algo que no se encuentra en la sección de resultados y análisis, esto quiere decir que hace falta incluir material en resultados y análisis. Concluir únicamente aspectos pertinentes a su trabajo en el laboratorio; evite generalizaciones que no hablan concretamente de lo que usted hizo o midió.
 
@@ -288,7 +298,8 @@ Laube, P; \textit{Semiconductor technology from A to Z}.\url{https://www.halblei
  Qing-Lian Xu, Zhen-Gang Zhu, Gang Su, \textit{Generalized Fourier law and anomalous Righi–Leduc effect in a ferromagnet}, Physics Letters A, Volume 382, Issues 42–43, 2018,Pages 3115-3119, ISSN 0375-9601, https://doi.org/10.1016/j.physleta.2018.08.006. \url{(http://www.sciencedirect.com/science/article/pii/S0375960118308648)}
  \bibitem{guia hall}
  Mejía, J; Universidad de los Andes. \textit{Efecto Hall}, 2017.
-
+\bibitem{Energia de gap}
+\url{http://www.ioffe.ru/SVA/NSM/Semicond/Ge/bandstr.html}
 \end{thebibliography}
 
 \end{document}
